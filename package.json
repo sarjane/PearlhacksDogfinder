@@ -1,0 +1,23 @@
+{
+  "name": "pearlhacks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "handlebars": "^4.1.0",
+    "kia": "^0.0.0",
+    "koa": "^2.7.0",
+    "koa-router": "^7.4.0",
+    "koa-view": "^2.1.2",
+    "koa-views": "^6.1.5",
+    "underscore": "^1.9.1",
+    "views": "^1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
