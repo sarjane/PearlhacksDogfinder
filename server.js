@@ -4,19 +4,27 @@ const views = require('koa-views');
 const Router = require('koa-router');
 const router = new Router();
 
-app.use(views(__dirname + '/views', {
-    extension: 'hbs',
+app.use(views(__dirname + "/views", {
+   extension: 'hbs',
     map: {
-      hbs: 'handlebars'
+       hbs: 'handlebars'
     }
-  }));
+}));
 
-router.get('/index', async function(ctx) {
-    return ctx.render("index", {body: "This is a website that can connect you to a dog nearby."});
+router.get('', async function(ctx) {
+    return ctx.render("index", {text: "Welcome to Dog Finder!", body: "This is a website that connects you to a dog nearby"});
+});
+
+router.get('/login', async function(ctx) {
+    return ctx.render("login", {username: 'barbie', password: 'password'});
 });
 
 router.get('/signup', async function(ctx) {
-    return ctx.render("signup");
+   return ctx.render("signup");
+});
+
+router.get('/aboutus', async function(ctx) {
+    return ctx.render("aboutus");
 });
 
 console.log('server starting...');
